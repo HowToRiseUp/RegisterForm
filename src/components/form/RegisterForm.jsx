@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import InputHook from "../input/InputHook";
 import RadioHook from "../radio/RadioHook";
+import DropdowHook from "../dropdow/DropdowHook";
 
 const RegisterForm = () => {
     const {
@@ -22,7 +23,7 @@ const RegisterForm = () => {
             </div>
             <div className="flex flex-col gap-1 mt-4">
                 <label className="font-medium text-sm" htmlFor="gender">Gender</label>
-                <div className="flex mt-2 gap-5">
+                <div className="flex mt-2 gap-5 ml-1">
                     <label className="flex items-center gap-2 cursor-pointer">
                         <RadioHook control={control} name="gender" value="male" />
                         <span className="text-[#999999]">Male</span>
@@ -33,6 +34,11 @@ const RegisterForm = () => {
                     </label>
                 </div>
             </div>
+            <div className="flex flex-col gap-1 mt-4">
+                <label className="font-medium text-sm" htmlFor="job">Are you</label>
+                <DropdowHook></DropdowHook>
+            </div>
+
             <button className="text-sm font-bold bg-[#0b0d11] p-3 text-white w-full mt-6 rounded">Submit</button>
         </form>
     );
